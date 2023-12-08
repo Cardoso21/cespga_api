@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: cespga
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: cespga
+    password: Dr@goes21
+  liquibase:
+    change-log: classpath:/config/liquibase/master.xml
+#    drop-first: true

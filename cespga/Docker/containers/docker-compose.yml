@@ -1,0 +1,7 @@
+version: "3.1"
+services:
+  cespga:
+    extends:
+      file: postgres/postgres.yml
+      service: cespga
+    container_name: cespga
