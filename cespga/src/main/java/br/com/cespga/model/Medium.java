@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "medius")
+@Table(name = "medium")
 public class Medium implements Serializable {
     private static final long serialVersion = 1L;
 
