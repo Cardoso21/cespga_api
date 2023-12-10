@@ -2,6 +2,7 @@ package br.com.cespga.date.vo.v1;
 
 import br.com.cespga.model.Cargo;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,6 +18,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonPropertyOrder({"id","nome","dtNascimento", "cpf","endereco", "genero","telefone","status","cargo"})
 public class MediumVO extends RepresentationModel<MediumVO> implements Serializable {
     private static final long serialVersion = 1L;
 
