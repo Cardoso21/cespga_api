@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="202312082152" author="Wagner Cardoso">
+        <createTable tableName="MEDIUM">
+            <column name="ID" type="INT" remarks="identificador unico do medium" autoIncrement="true">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="NOME" type="VARCHAR(30)" remarks="Nome do medium">
+                <constraints nullable="false" />
+            </column>
+            <column name="DT_NASCIMENTO" type="DATE" remarks="Data de nascimento do medium">
+                <constraints nullable="false" />
+            </column>
+            <column name="CPF" type="VARCHAR(11)" remarks="cpf do medium">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="ENDERECO" type="VARCHAR(50)" remarks="endereço do medium"/>
+            <column name="TELEFONE" type="VARCHAR(15)" remarks="numero de telefone com codigo de area" />
+            <column name="GENERO" type="VARCHAR(15)" remarks="sexo do medium" />
+            <column name="STATUS" type="BOOLEAN" remarks="Status do medium ativo">
+                <constraints nullable="false" />
+            </column>
+            <column name="ID_CARGO" type="INT" remarks="cargo chave estrangeira">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

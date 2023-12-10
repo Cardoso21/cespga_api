@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="202312082213" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Babalorixá" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082214" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Ialorixá" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082215" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Ogã" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082216" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Pejigã" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082217" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Ekede" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082218" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Ekede" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082219" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Ebomi" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082220" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Iaô" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082221" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Abiã" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082222" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Cambone" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082223" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Pai pequeno" />
+        </insert>
+    </changeSet>
+    <changeSet id="202312082224" author="wagner cardoso">
+        <insert tableName="CARGO">
+            <column name="CARGO" value="Mãe pequena" />
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
