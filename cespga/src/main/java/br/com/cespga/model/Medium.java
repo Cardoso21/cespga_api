@@ -1,7 +1,7 @@
 package br.com.cespga.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,30 +23,30 @@ public class Medium implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+    @NotNull
     private String nome;
-    @NotBlank
+
     @Temporal(TemporalType.DATE)
     private Date dtNascimento;
-    @NotBlank
+
     @Temporal(TemporalType.DATE)
     private Date dtIniciacao;
-    @NotBlank
+    @NotNull
     private String cpf;
-    @NotBlank
+    @NotNull
     private String endereco;
 
     private String genero;
-    @NotBlank
+    @NotNull
     private String telefone;
 
     private Boolean status;
-    @NotBlank
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_cargo")
     private Cargo cargo;
 
-    private String observacoes;
+    private String observacao;
 
 
 }

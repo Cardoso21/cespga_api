@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="202312111136" author="Wagner Cardoso">
+        <createTable tableName="AGENDA">
+            <column name="ID" type="int" remarks="id do evento" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="NOME" type="varchar(70)" remarks="nome do evento">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DT_EVENTO" type="date" remarks="data do evento criado">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DESCRICAO" type="varchar(200)" remarks="Descrição do evento" />
+
+        </createTable>
+    </changeSet>
+
+
+
+</databaseChangeLog>

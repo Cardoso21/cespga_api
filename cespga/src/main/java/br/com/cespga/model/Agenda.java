@@ -1,6 +1,7 @@
 package br.com.cespga.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,11 +22,12 @@ public class Agenda implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @NotNull
     private String nome;
 
+    @Temporal(TemporalType.DATE)
     private Date dtEvento;
-
+    @NotNull
     private String descricao;
 
 }
