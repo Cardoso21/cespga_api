@@ -30,6 +30,8 @@ public class MediumVO extends RepresentationModel<MediumVO> implements Serializa
 
     private Date dtNascimento;
 
+    private Date dtIniciacao;
+
     private String cpf;
 
     private String endereco;
@@ -41,6 +43,8 @@ public class MediumVO extends RepresentationModel<MediumVO> implements Serializa
     private Boolean status;
 
     private Cargo cargo;
+
+    private String observacoes;
 
 
 

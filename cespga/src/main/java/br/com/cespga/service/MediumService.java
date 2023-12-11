@@ -48,10 +48,12 @@ public class MediumService {
     public MediumVO atualizar(  MediumVO mediumVO) {
 
         Medium medium = repository.findById(mediumVO.getKey()).orElseThrow(()->new ResourceNotFoundException("id não encontrado"));
-        medium.setNome(medium.getNome());
-        medium.setEndereco(medium.getEndereco());
-        medium.setGenero(medium.getGenero());
-        medium.setTelefone(medium.getTelefone());
+        medium.setNome(mediumVO.getNome());
+        medium.setEndereco(mediumVO.getEndereco());
+        medium.setGenero(mediumVO.getGenero());
+        medium.setTelefone(mediumVO.getTelefone());
+        medium.setObservacoes(mediumVO.getObservacoes());
+        medium.setDtIniciacao(mediumVO.getDtIniciacao());
 
 
         MediumVO mediumVO1 = DozerMapper.parseObject(repository.save(medium),MediumVO.class);
