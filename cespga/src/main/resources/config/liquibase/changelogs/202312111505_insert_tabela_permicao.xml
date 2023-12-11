@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- ChangeSet for inserting data into the 'permission' table -->
+    <changeSet id="202312111505" author="Wagner Cardoso">
+        <insert tableName="permission">
+            <column name="description" value="ADMIN"/>
+        </insert>
+
+        <insert tableName="permission">
+            <column name="description" value="MANAGER"/>
+        </insert>
+
+        <insert tableName="permission">
+            <column name="description" value="COMMON_USER"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

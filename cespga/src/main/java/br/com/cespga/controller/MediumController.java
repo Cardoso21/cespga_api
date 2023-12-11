@@ -1,6 +1,5 @@
 package br.com.cespga.controller;
 
-import br.com.cespga.date.vo.v1.CargoVO;
 import br.com.cespga.date.vo.v1.MediumVO;
 import br.com.cespga.service.MediumService;
 import lombok.RequiredArgsConstructor;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+@CrossOrigin(origins = {"http://localhost:8081"})
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/medium")

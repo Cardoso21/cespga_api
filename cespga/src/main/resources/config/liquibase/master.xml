@@ -4,16 +4,19 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
-<!--    <include file="config/liquibase/changelogs/202109151616_create_table_situacao.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelogs/202109151635_insert_table_situacao.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelogs/202109151621_create_table_motivos.xml" relativeToChangelogFile="false"/>-->
+
     <include file="config/liquibase/changelogs/202312111135_create_table_agenda.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelogs/202312082206_create_table_cargo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelogs/202312082213_inserte_table_cargo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelogs/202312082152_create_table_medium.xml" relativeToChangelogFile="false"/>
-<!--    <include file="config/liquibase/changelogs/202109152014_create_table_relac_usuario-evento.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelogs/202109152025_FKs_relac_usuario-evento.xml" relativeToChangelogFile="false"/>-->
     <include file="config/liquibase/changelogs/202312082202_FK_cargo_medium.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202312111500_create_table_permicao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202312111505_insert_tabela_permicao.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202312111508_create_table_usuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202312111510_insert_table_usuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202312111511_create_table_permicao_usuario.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelogs/202312111521_insert_permicao_usuario.xml" relativeToChangelogFile="false"/>
+
 
 
 

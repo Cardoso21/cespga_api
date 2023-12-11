@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- ChangeSet for creating the 'user_permission' table -->
+    <changeSet id="createUserPermissionTable" author="yourName">
+        <createTable tableName="user_permission">
+            <column name="id_user" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="id_permission" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey
+                tableName="user_permission"
+                columnNames="id_user, id_permission"
+                constraintName="pk_user_permission"
+        />
+
+        <addUniqueConstraint
+                tableName="user_permission"
+                columnNames="id_user, id_permission"
+                constraintName="unique_user_permission"
+        />
+
+        <addForeignKeyConstraint
+                baseTableName="user_permission"
+                baseColumnNames="id_user"
+                referencedTableName="users"
+                referencedColumnNames="id"
+                constraintName="fk_user_permission"
+                onDelete="CASCADE"
+                onUpdate="CASCADE"
+        />
+
+        <addForeignKeyConstraint
+                baseTableName="user_permission"
+                baseColumnNames="id_permission"
+                referencedTableName="permission"
+                referencedColumnNames="id"
+                constraintName="fk_user_permission_permission"
+                onDelete="CASCADE"
+                onUpdate="CASCADE"
+        />
+    </changeSet>
+
+</databaseChangeLog>

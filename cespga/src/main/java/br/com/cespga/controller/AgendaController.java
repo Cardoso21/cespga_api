@@ -1,9 +1,6 @@
 package br.com.cespga.controller;
 
 import br.com.cespga.date.vo.v1.AgendaVO;
-import br.com.cespga.date.vo.v1.MediumVO;
-import br.com.cespga.mapper.DozerMapper;
-import br.com.cespga.model.Agenda;
 import br.com.cespga.service.AgendaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+@CrossOrigin(origins = {"http://localhost:8081"})
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/agenda")
