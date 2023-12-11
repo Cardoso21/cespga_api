@@ -1,9 +1,11 @@
 package br.com.cespga.service;
 
 import br.com.cespga.controller.MediumController;
+import br.com.cespga.date.vo.v1.CargoVO;
 import br.com.cespga.date.vo.v1.MediumVO;
 import br.com.cespga.exception.ResourceNotFoundException;
 import br.com.cespga.mapper.DozerMapper;
+import br.com.cespga.model.Cargo;
 import br.com.cespga.model.Medium;
 import br.com.cespga.repositories.MediumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +39,10 @@ public class MediumService {
         return vo;
     }
 
+
+
+
+
     public MediumVO create(MediumVO mediumVO) {
         var entity = DozerMapper.parseObject(mediumVO, Medium.class);
         // Define o Medium como ativo ao criar
@@ -52,7 +58,7 @@ public class MediumService {
         medium.setEndereco(mediumVO.getEndereco());
         medium.setGenero(mediumVO.getGenero());
         medium.setTelefone(mediumVO.getTelefone());
-        medium.setObservacoes(mediumVO.getObservacoes());
+        medium.setObservacao(mediumVO.getObservacao());
         medium.setDtIniciacao(mediumVO.getDtIniciacao());
 
 

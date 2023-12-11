@@ -18,7 +18,7 @@
             <column name="DT_INICIACAO" type="DATE" remarks="Data que o medium entrou no cespga">
                 <constraints nullable="false" />
             </column>
-            <column name="CPF" type="VARCHAR(11)" remarks="cpf do medium">
+            <column name="CPF" type="VARCHAR(15)" remarks="cpf do medium">
                 <constraints nullable="false" unique="true"/>
             </column>
             <column name="ENDERECO" type="VARCHAR(50)" remarks="endereço do medium"/>

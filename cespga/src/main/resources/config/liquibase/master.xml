@@ -7,7 +7,7 @@
 <!--    <include file="config/liquibase/changelogs/202109151616_create_table_situacao.xml" relativeToChangelogFile="false"/>-->
 <!--    <include file="config/liquibase/changelogs/202109151635_insert_table_situacao.xml" relativeToChangelogFile="false"/>-->
 <!--    <include file="config/liquibase/changelogs/202109151621_create_table_motivos.xml" relativeToChangelogFile="false"/>-->
-<!--    <include file="config/liquibase/changelogs/202109151731_create_table_evento.xml" relativeToChangelogFile="false"/>-->
+    <include file="config/liquibase/changelogs/202312111135_create_table_agenda.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelogs/202312082206_create_table_cargo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelogs/202312082213_inserte_table_cargo.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelogs/202312082152_create_table_medium.xml" relativeToChangelogFile="false"/>

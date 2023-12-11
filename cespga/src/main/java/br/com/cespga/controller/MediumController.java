@@ -1,5 +1,6 @@
 package br.com.cespga.controller;
 
+import br.com.cespga.date.vo.v1.CargoVO;
 import br.com.cespga.date.vo.v1.MediumVO;
 import br.com.cespga.service.MediumService;
 import lombok.RequiredArgsConstructor;
