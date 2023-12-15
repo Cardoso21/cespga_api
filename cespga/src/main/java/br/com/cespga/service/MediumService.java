@@ -1,11 +1,9 @@
 package br.com.cespga.service;
 
 import br.com.cespga.controller.MediumController;
-import br.com.cespga.date.vo.v1.CargoVO;
 import br.com.cespga.date.vo.v1.MediumVO;
 import br.com.cespga.exception.ResourceNotFoundException;
 import br.com.cespga.mapper.DozerMapper;
-import br.com.cespga.model.Cargo;
 import br.com.cespga.model.Medium;
 import br.com.cespga.repositories.MediumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,15 +31,11 @@ public class MediumService {
     }
 
     public MediumVO buscaPorId (Long id){
-        var entity = repository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Person nao encontrado"));
+        var entity = repository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Medium nao encontrado"));
         MediumVO vo = DozerMapper.parseObject(entity,MediumVO.class);
         vo.add(linkTo(methodOn(MediumController.class).findyById(id)).withSelfRel());
         return vo;
     }
-
-
-
-
 
     public MediumVO create(MediumVO mediumVO) {
         var entity = DozerMapper.parseObject(mediumVO, Medium.class);

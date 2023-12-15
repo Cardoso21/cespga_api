@@ -1,9 +1,5 @@
 package br.com.cespga.service;
 
-import br.com.cespga.controller.CargoController;
-import br.com.cespga.date.vo.v1.CargoVO;
-import br.com.cespga.exception.ResourceNotFoundException;
-import br.com.cespga.mapper.DozerMapper;
 import br.com.cespga.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -14,9 +10,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.logging.Logger;
-
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
-import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @AllArgsConstructor
 @NoArgsConstructor
