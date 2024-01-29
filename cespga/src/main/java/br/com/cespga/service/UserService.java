@@ -18,17 +18,22 @@ public class UserService implements UserDetailsService {
 
     private Logger logger = Logger.getLogger(UserService.class.getName());
 
-    @Autowired
     UserRepository userRepository;
+    @Autowired
+    public UserService( UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        logger.info("Nome do usuario"+username);
+
         var user = userRepository.findByUserName(username);
         if(user != null){
+
             return user;
+
         }else {
-            throw new UsernameNotFoundException("Usuario"+username+"não encontrado");
+            throw new UsernameNotFoundException("Usuario "+username+"não encontrado");
         }
     }
 }

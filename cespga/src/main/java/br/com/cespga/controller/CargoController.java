@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-@CrossOrigin(origins = {"http://localhost:8081"})
+@CrossOrigin(origins = {"http://localhost:8080"})
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/cargo")

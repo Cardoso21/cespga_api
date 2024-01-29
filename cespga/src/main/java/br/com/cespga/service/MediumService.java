@@ -19,8 +19,11 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 public class MediumService {
     private final Logger logger = Logger.getLogger(MediumService.class.getName());
 
+    private final MediumRepository repository;
     @Autowired
-    MediumRepository repository;
+    public MediumService(MediumRepository repository) {
+        this.repository = repository;
+    }
     public List<MediumVO> buscartodos() {
 
         logger.info("buscando todos os persons! ");
