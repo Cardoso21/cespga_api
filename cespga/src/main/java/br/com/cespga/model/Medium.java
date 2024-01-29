@@ -40,5 +40,7 @@ public class Medium implements Serializable {
     @JoinColumn(name = "id_cargo")
     private Cargo cargo;
 
+    private String observacao;
+
 
 }
