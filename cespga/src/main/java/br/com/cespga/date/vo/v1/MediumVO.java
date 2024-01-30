@@ -18,7 +18,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@JsonPropertyOrder({"id","nome","dtNascimento", "cpf","endereco", "genero","telefone","status","cargo"})
+@JsonPropertyOrder({"id","nome","dtNascimento","dtIniciacao", "cpf","endereco", "genero","telefone","status","cargo","observacao"})
 public class MediumVO extends RepresentationModel<MediumVO> implements Serializable {
     private static final long serialVersion = 1L;
 
@@ -29,6 +29,8 @@ public class MediumVO extends RepresentationModel<MediumVO> implements Serializa
     private String nome;
 
     private Date dtNascimento;
+
+    private Date dtIniciacao;
 
     private String cpf;
 
@@ -41,6 +43,8 @@ public class MediumVO extends RepresentationModel<MediumVO> implements Serializa
     private Boolean status;
 
     private Cargo cargo;
+
+    private String observacao;
 
 
 

@@ -15,22 +15,25 @@
             <column name="DT_NASCIMENTO" type="DATE" remarks="Data de nascimento do medium">
                 <constraints nullable="false" />
             </column>
-            <column name="CPF" type="VARCHAR(11)" remarks="cpf do medium">
+            <column name="DT_INICIACAO" type="DATE" remarks="Data que o medium entrou no cespga">
+                <constraints nullable="false" />
+            </column>
+            <column name="CPF" type="VARCHAR(15)" remarks="cpf do medium">
                 <constraints nullable="false" unique="true"/>
             </column>
             <column name="ENDERECO" type="VARCHAR(50)" remarks="endereço do medium"/>
             <column name="TELEFONE" type="VARCHAR(15)" remarks="numero de telefone com codigo de area" />
             <column name="GENERO" type="VARCHAR(15)" remarks="sexo do medium" />
+            <column name="ID_CARGO" type="INT" remarks="cargo chave estrangeira">
+
 
             <column name="OBSERVACAO" type="VARCHAR(300)" remarks="Observação sobre o medium">
-                <constraints nullable="false" />
-            </column>
-            <column name="ID_CARGO" type="INT" remarks="cargo chave estrangeira">
                 <constraints nullable="false" />
             </column>
             <column name="STATUS" type="BOOLEAN" remarks="Status do medium ativo">
                 <constraints nullable="false" />
             </column>
+           
         </createTable>
     </changeSet>
 </databaseChangeLog>

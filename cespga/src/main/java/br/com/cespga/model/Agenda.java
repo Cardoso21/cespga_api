@@ -15,38 +15,19 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "medium")
-public class Medium implements Serializable {
+@Table(name = "agenda")
+public class Agenda implements Serializable {
     private static final long serialVersion = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotNull
     private String nome;
 
     @Temporal(TemporalType.DATE)
-    private Date dtNascimento;
-
-    @Temporal(TemporalType.DATE)
-    private Date dtIniciacao;
+    private Date dtEvento;
     @NotNull
-    private String cpf;
-    @NotNull
-    private String endereco;
-
-    private String genero;
-    @NotNull
-    private String telefone;
-
-    private Boolean status;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_cargo")
-    private Cargo cargo;
-
-    private String observacao;
-
+    private String descricao;
 
 }

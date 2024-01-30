@@ -1,8 +1,10 @@
 package br.com.cespga.controller;
 
-import br.com.cespga.date.vo.v1.CargoVO;
+import br.com.cespga.date.vo.v1.AgendaVO;
 import br.com.cespga.date.vo.v1.MediumVO;
-import br.com.cespga.service.MediumService;
+import br.com.cespga.mapper.DozerMapper;
+import br.com.cespga.model.Agenda;
+import br.com.cespga.service.AgendaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -14,41 +16,43 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/medium")
-public class MediumController {
+@RequestMapping("/api/agenda")
+public class AgendaController {
 
     private final AtomicLong counter = new AtomicLong();
+
     @Autowired
-    private MediumService service;
+    private AgendaService service;
+
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    public List<AgendaVO> findAll(){
+        return service.buscartodos();
+    }
 
     @GetMapping(value = "/{id}",produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public MediumVO findyById(
+    public AgendaVO findyById(
             @PathVariable(value = "id")Long id ){
         return service.buscaPorId(id);
-    }
-    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public List<MediumVO> findAll(){
-        return service.buscartodos();
     }
 
     @PostMapping(
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public MediumVO create(
-            @RequestBody MediumVO mediumVO){
-        return service.create(mediumVO);
+    public AgendaVO create(
+            @RequestBody AgendaVO agendaVO){
+        return service.create(agendaVO);
     }
 
     @PutMapping(value = "/{id}",
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
-    public MediumVO update(
-            @RequestBody MediumVO mediumVO){
-        return service.atualizar(mediumVO);
+    public AgendaVO update(
+            @RequestBody AgendaVO agendaVO) {
+        return service.atualizar(agendaVO);
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity <?> delete(@PathVariable(value = "id")Long id ){
+    public ResponseEntity<?> delete(@PathVariable(value = "id")Long id ){
         service.delete(id);
         return ResponseEntity.noContent().build();
     }
