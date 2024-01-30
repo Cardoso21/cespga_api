@@ -25,14 +25,15 @@
             <column name="TELEFONE" type="VARCHAR(15)" remarks="numero de telefone com codigo de area" />
             <column name="GENERO" type="VARCHAR(15)" remarks="sexo do medium" />
             <column name="ID_CARGO" type="INT" remarks="cargo chave estrangeira">
-                <constraints nullable="false" />
-            </column>
+
+
             <column name="OBSERVACAO" type="VARCHAR(300)" remarks="Observação sobre o medium">
                 <constraints nullable="false" />
             </column>
             <column name="STATUS" type="BOOLEAN" remarks="Status do medium ativo">
                 <constraints nullable="false" />
             </column>
+           
         </createTable>
     </changeSet>
 </databaseChangeLog>
